@@ -1,0 +1,5 @@
+name = "portfolio"
+compatibility_date = "2025-04-16"
+
+[site]
+bucket = "."  # or "./dist" if you build into a dist folder
