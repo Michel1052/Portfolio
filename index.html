@@ -1,0 +1,227 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Michel Malta - Portfólio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #e9eff6;
+            color: #1a1a1a;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: darkblue;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            position: relative;
+        }
+
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header h2 {
+                font-size: 1.2rem;
+                color: #ff9800;
+                margin-top: 0.5rem;
+            }
+
+        .icons {
+            position: absolute;
+            top: 65px;
+            right: 6rem;
+        }
+
+            .icons a {
+                margin-left: 1rem;
+                text-decoration: none;
+                color: white;
+                font-size: 1.2rem;
+            }
+
+        .container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 1rem;
+            padding: 2rem;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            margin-bottom: 1rem;
+        }
+
+            .card h3 {
+                margin-bottom: 0.75rem;
+                display: flex;
+                align-items: center;
+                font-size: 1.1rem;
+                color: #0d2b55;
+            }
+
+                .card h3 i {
+                    margin-right: 0.5rem;
+                }
+
+        .skills-bar {
+            margin-top: 1rem;
+        }
+
+        .skill {
+            margin-bottom: 1rem;
+        }
+
+        .skill-name {
+            margin-bottom: 0.25rem;
+        }
+
+        .bar {
+            background: #e0e0e0;
+            height: 8px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .bar-fill {
+            height: 100%;
+            background: #ff9800;
+            width: 0;
+            transition: width 0.8s ease;
+        }
+
+        .experience-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .projects ul {
+            list-style: none;
+            padding-left: 1rem;
+        }
+
+            .projects ul li::before {
+                content: "🔹";
+                margin-right: 0.5rem;
+            }
+
+        @keyframes growBar {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: var(--width);
+            }
+        }
+
+        .bar-fill.animate {
+            animation: growBar 1s forwards;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .card.projects {
+            margin-top: 28px;
+        }
+
+        .card.contato {
+            
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Michel Malta</h1>
+        <h2>Desenvolvedor Júnior</h2>        
+    </header>
+
+    <div class="container">
+        <div>
+            <div class="card">
+                <h3>👤 Sobre mim</h3>
+                <p>
+                    Sou um desenvolvedor focado em ASP.NET MVC e apaixonado por tecnologia. Tenho experiência na criação de aplicações web utilizando C#, SQL Server e JavaScript, sempre buscando escrever um código limpo e eficiente.
+                    Estou sempre explorando novas tecnologias e aprimorando minhas habilidades, seja otimizando queries no banco de dados, melhorando a performance de aplicações ou garantindo uma arquitetura bem estruturada. Meu objetivo é criar soluções robustas, escaláveis e fáceis de manter.
+                    Se quiser saber mais sobre meus projetos ou trocar uma ideia, fique à vontade para entrar em contato!
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>💼 Experiência profissional</h3>
+                <div class="experience-item">
+                    <strong>2019 - 2020 | ISBET</strong><br>
+                    Desenvolvedor FullStack<br>
+                    Atuei, como estagiário, no desenvolvimento e manutenção de aplicações web utilizando ASP.NET WEBFORMS, Visual Basic/C# e SQL Server. Trabalhei na implementação de novas funcionalidades, correção de bugs e otimização de código, sempre buscando melhorar a performance e a organização dos projetos.
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="card">
+                <h3>⚙️ Habilidades</h3>
+                <div class="skills-bar">
+                    <div class="skill">
+                        <div class="skill-name">ASP.NET</div>
+                        <div class="bar"><div class="bar-fill animate" style="--width: 90%; width: 90%;"></div></div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name">JavaScript</div>
+                        <div class="bar"><div class="bar-fill animate" style="--width: 70%; width: 70%;"></div></div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name">HTML</div>
+                        <div class="bar"><div class="bar-fill animate" style="--width: 60%; width: 60%;"></div></div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name">SQL</div>
+                        <div class="bar"><div class="bar-fill animate" style="--width: 80%; width: 80%;"></div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card projects">
+                <h3>💻 Projetos</h3>
+                <ul>
+                    <li><a href="https://github.com/Michel1052/Lojinha"> Lojinha (pequeno e-commerce)</a></li>
+                </ul>
+            </div>
+
+            <div class="card contato">
+                <h3>Contato</h3>
+
+                <a href="https://wa.me/5521997856081" target="_blank" class="whatsapp-button-fixo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width = 30px; height=28px" alt="WhatsApp">
+                </a>
+                <!--<a href="#"><i>✉️</i></a>-->
+                <a href="mailto:michelmalta420@gmail.com" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Mail_%28iOS%29.svg" width=30px; height=27px" alt="Email">
+                </a>
+
+                <a href="https://github.com/Michel1052">
+                    <img class="cartImg" src="assets/images/github-mark.png" width=27px; height=27px" alt="GitHub">
+                </a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
